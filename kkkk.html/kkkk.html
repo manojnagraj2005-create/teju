@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manoj Kumar N | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:42px;
+    letter-spacing:2px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+    opacity:0.9;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius:15px;
+    padding:30px;
+    margin:30px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+h2{
+    margin-bottom:15px;
+    border-bottom:2px solid #00f2fe;
+    display:inline-block;
+    padding-bottom:5px;
+}
+
+.skills span{
+    display:inline-block;
+    background:#00f2fe;
+    color:black;
+    padding:8px 15px;
+    border-radius:20px;
+    margin:5px;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    background:rgba(0,0,0,0.3);
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#00f2fe;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Manoj Kumar N</h1>
+    <p>6th Semester Student | ACS College of Engineering</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            I am Manoj Kumar N, currently pursuing my 6th semester at ACS College of Engineering.
+            I am passionate about technology, learning new skills, and building creative projects.
+            I believe in continuous growth and dedication towards excellence.
+        </p>
+        <p style="margin-top:10px;">
+            Proud husband of Roopa.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Education</h2>
+        <p><strong>College:</strong> ACS College of Engineering</p>
+        <p><strong>Semester:</strong> 6th Semester</p>
+        <p><strong>Field:</strong> Engineering Student</p>
+    </div>
+
+    <div class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Problem Solving</span>
+            <span>Team Work</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: yourmail@example.com</p>
+        <p>Phone: +91 XXXXXXXXXX</p>
+        <button onclick="showMessage()">Say Hello</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Manoj Kumar N | Portfolio Website
+</footer>
+
+<script>
+function showMessage(){
+    alert("Thank you for visiting Manoj Kumar N's Portfolio!");
+}
+</script>
+
+</body>
+</html>
