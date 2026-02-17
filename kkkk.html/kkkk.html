@@ -1,113 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>For Roopa ❤️</title>
+    <title>Hello World</title>
     <style>
-        body{
-            margin:0;
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg,#ff758c,#ff7eb3,#ffb199);
-            overflow:hidden;
+        body {
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
-        .card{
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(15px);
-            padding:40px;
-            border-radius:20px;
-            text-align:center;
-            color:white;
-            box-shadow:0 10px 30px rgba(0,0,0,0.3);
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        h1{
-            font-size:36px;
-            margin-bottom:10px;
-        }
-
-        p{
-            font-size:18px;
-            margin-top:10px;
-            line-height:1.6;
-        }
-
-        button{
-            margin-top:20px;
-            padding:10px 25px;
-            border:none;
-            border-radius:25px;
-            background:white;
-            color:#ff4e7a;
-            font-weight:bold;
-            cursor:pointer;
-            transition:0.3s;
-        }
-
-        button:hover{
-            transform:scale(1.1);
-        }
-
-        @keyframes fadeIn{
-            from{opacity:0; transform:translateY(20px);}
-            to{opacity:1; transform:translateY(0);}
-        }
-
-        .heart{
-            position:absolute;
-            color:white;
-            font-size:20px;
-            animation: float 6s linear infinite;
-        }
-
-        @keyframes float{
-            0%{transform:translateY(100vh) scale(0.5); opacity:0;}
-            50%{opacity:1;}
-            100%{transform:translateY(-10vh) scale(1.2); opacity:0;}
+        h1 {
+            color: darkblue;
+            font-size: 40px;
         }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <h1>For My Dearest Roopa</h1>
-    <p>
-        You are the most beautiful part of my life.  
-        Every moment with you is special and meaningful.  
-        Thank you for your love, support, and happiness you bring into my world.
-    </p>
-    <p>
-        With all my heart,  
-        <br><strong>Manoj ❤️</strong>
-    </p>
-    <button onclick="showLove()">Click for a Surprise</button>
-</div>
-
-<script>
-function showLove(){
-    alert("I Love You Roopa ❤️ Forever and Always!");
-}
-
-function createHeart(){
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 15 + "px";
-    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    },6000);
-}
-
-setInterval(createHeart, 400);
-</script>
+    <h1>Hello World</h1>
 
 </body>
 </html>
