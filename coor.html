@@ -1,16 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Button</title>
+    <title>Mini Click Game</title>
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            text-align:center;
+            background: linear-gradient(135deg,#1e3c72,#2a5298);
+            color:white;
+        }
+
+        h1{
+            margin-top:20px;
+        }
+
+        #gameArea{
+            width:90%;
+            max-width:500px;
+            height:400px;
+            background:white;
+            margin:20px auto;
+            position:relative;
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        #box{
+            width:50px;
+            height:50px;
+            background:red;
+            position:absolute;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        #score, #time{
+            font-size:18px;
+            margin:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            border:none;
+            border-radius:20px;
+            background:yellow;
+            font-weight:bold;
+            cursor:pointer;
+        }
+    </style>
 </head>
+
 <body>
 
-<h2>Click the Button</h2>
-<button onclick="showMessage()">Click Me</button>
+<h1>Click the Moving Box</h1>
+<div id="score">Score: 0</div>
+<div id="time">Time: 30</div>
+<button onclick="startGame()">Start Game</button>
+
+<div id="gameArea">
+    <div id="box" onclick="increaseScore()"></div>
+</div>
 
 <script>
-function showMessage() {
-  alert("Hello! This is a small HTML example.");
+let score = 0;
+let timeLeft = 30;
+let timer;
+let moveInterval;
+
+function startGame(){
+    score = 0;
+    timeLeft = 30;
+    document.getElementById("score").innerText = "Score: " + score;
+    document.getElementById("time").innerText = "Time: " + timeLeft;
+
+    moveBox();
+
+    moveInterval = setInterval(moveBox, 800);
+
+    timer = setInterval(function(){
+        timeLeft--;
+        document.getElementById("time").innerText = "Time: " + timeLeft;
+
+        if(timeLeft <= 0){
+            clearInterval(timer);
+            clearInterval(moveInterval);
+            alert("Game Over! Your Score: " + score);
+        }
+    },1000);
+}
+
+function moveBox(){
+    let gameArea = document.getElementById("gameArea");
+    let box = document.getElementById("box");
+
+    let maxX = gameArea.clientWidth - box.clientWidth;
+    let maxY = gameArea.clientHeight - box.clientHeight;
+
+    let randomX = Math.floor(Math.random() * maxX);
+    let randomY = Math.floor(Math.random() * maxY);
+
+    box.style.left = randomX + "px";
+    box.style.top = randomY + "px";
+}
+
+function increaseScore(){
+    score++;
+    document.getElementById("score").innerText = "Score: " + score;
 }
 </script>
 
