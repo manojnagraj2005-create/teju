@@ -1,157 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manoj Kumar N | Portfolio</title>
+    <title>For Roopa ❤️</title>
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg,#ff758c,#ff7eb3,#ffb199);
+            overflow:hidden;
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+        .card{
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(15px);
+            padding:40px;
+            border-radius:20px;
+            text-align:center;
+            color:white;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
 
-body{
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-}
+        h1{
+            font-size:36px;
+            margin-bottom:10px;
+        }
 
-header{
-    text-align:center;
-    padding:60px 20px;
-}
+        p{
+            font-size:18px;
+            margin-top:10px;
+            line-height:1.6;
+        }
 
-header h1{
-    font-size:42px;
-    letter-spacing:2px;
-}
+        button{
+            margin-top:20px;
+            padding:10px 25px;
+            border:none;
+            border-radius:25px;
+            background:white;
+            color:#ff4e7a;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
 
-header p{
-    margin-top:10px;
-    font-size:18px;
-    opacity:0.9;
-}
+        button:hover{
+            transform:scale(1.1);
+        }
 
-.container{
-    width:90%;
-    max-width:1000px;
-    margin:auto;
-}
+        @keyframes fadeIn{
+            from{opacity:0; transform:translateY(20px);}
+            to{opacity:1; transform:translateY(0);}
+        }
 
-.card{
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border-radius:15px;
-    padding:30px;
-    margin:30px 0;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-    transition:0.3s;
-}
+        .heart{
+            position:absolute;
+            color:white;
+            font-size:20px;
+            animation: float 6s linear infinite;
+        }
 
-.card:hover{
-    transform: translateY(-5px);
-}
-
-h2{
-    margin-bottom:15px;
-    border-bottom:2px solid #00f2fe;
-    display:inline-block;
-    padding-bottom:5px;
-}
-
-.skills span{
-    display:inline-block;
-    background:#00f2fe;
-    color:black;
-    padding:8px 15px;
-    border-radius:20px;
-    margin:5px;
-    font-weight:bold;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-    background:rgba(0,0,0,0.3);
-}
-
-button{
-    padding:10px 20px;
-    border:none;
-    border-radius:25px;
-    background:#00f2fe;
-    color:black;
-    font-weight:bold;
-    cursor:pointer;
-    margin-top:15px;
-    transition:0.3s;
-}
-
-button:hover{
-    background:white;
-}
-</style>
+        @keyframes float{
+            0%{transform:translateY(100vh) scale(0.5); opacity:0;}
+            50%{opacity:1;}
+            100%{transform:translateY(-10vh) scale(1.2); opacity:0;}
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Manoj Kumar N</h1>
-    <p>6th Semester Student | ACS College of Engineering</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            I am Manoj Kumar N, currently pursuing my 6th semester at ACS College of Engineering.
-            I am passionate about technology, learning new skills, and building creative projects.
-            I believe in continuous growth and dedication towards excellence.
-        </p>
-        <p style="margin-top:10px;">
-            Proud husband of Roopa.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Education</h2>
-        <p><strong>College:</strong> ACS College of Engineering</p>
-        <p><strong>Semester:</strong> 6th Semester</p>
-        <p><strong>Field:</strong> Engineering Student</p>
-    </div>
-
-    <div class="card">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Problem Solving</span>
-            <span>Team Work</span>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: yourmail@example.com</p>
-        <p>Phone: +91 XXXXXXXXXX</p>
-        <button onclick="showMessage()">Say Hello</button>
-    </div>
-
+<div class="card">
+    <h1>For My Dearest Roopa</h1>
+    <p>
+        You are the most beautiful part of my life.  
+        Every moment with you is special and meaningful.  
+        Thank you for your love, support, and happiness you bring into my world.
+    </p>
+    <p>
+        With all my heart,  
+        <br><strong>Manoj ❤️</strong>
+    </p>
+    <button onclick="showLove()">Click for a Surprise</button>
 </div>
 
-<footer>
-    © 2026 Manoj Kumar N | Portfolio Website
-</footer>
-
 <script>
-function showMessage(){
-    alert("Thank you for visiting Manoj Kumar N's Portfolio!");
+function showLove(){
+    alert("I Love You Roopa ❤️ Forever and Always!");
 }
+
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    },6000);
+}
+
+setInterval(createHeart, 400);
 </script>
 
 </body>
