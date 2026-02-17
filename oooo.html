@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Web Page</title>
+  <title>Color Box</title>
 </head>
 <body>
 
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML page.</p>
+<div id="box" style="width:150px;height:150px;background-color:blue;"></div>
+<br>
+<button onclick="changeColor()">Change Color</button>
 
-    <button onclick="showMessage()">Click Me</button>
-
-    <script>
-        function showMessage() {
-            alert("Hello, Manu!");
-        }
-    </script>
+<script>
+function changeColor() {
+  document.getElementById("box").style.backgroundColor = "red";
+}
+</script>
 
 </body>
 </html>
